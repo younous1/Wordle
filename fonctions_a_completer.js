@@ -27,6 +27,9 @@ function init() {
 
   let btnsValider = document.getElementById('bouton_valider');
 	btnsValider.addEventListener('click', () => valideLeMot());
+
+  let btnsNvPartie = document.getElementById('bouton_nouvelle_partie');
+	btnsNvPartie.addEventListener('click', () => lanceNouvellePartie());
   
   nbMotsTrouves = parseInt(localStorage.getItem('nbMotsTrouves'));
   if(isNaN(nbMotsTrouves))    // si c'est la premiere partie sur le navigateur, dans localStorage la varaible sera à NaN, donc on initialise a 0 pour incrémenté quand le joueur gagnera une partie

@@ -15,7 +15,7 @@ function retourneCaseActive() {
   if (caseActive) {
     return caseActive;
   } else {
-    console.warn("Aucune case active !");
+    /*console.warn("Aucune case active !");*/
     return null;
   }
 }
