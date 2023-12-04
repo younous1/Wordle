@@ -27,10 +27,19 @@ function init() {
 
   let btnsValider = document.getElementById('bouton_valider');
 	btnsValider.addEventListener('click', () => valideLeMot());
-
+  
   nbMotsTrouves = parseInt(localStorage.getItem('nbMotsTrouves'));
+  if(isNaN(nbMotsTrouves))    // si c'est la premiere partie sur le navigateur, dans localStorage la varaible sera à NaN, donc on initialise a 0 pour incrémenté quand le joueur gagnera une partie
+  {
+    localStorage.setItem('nbMotsTrouves', 0);
+    nbMotsTrouves = parseInt(localStorage.getItem('nbMotsTrouves'));
+  }
   nbMotsEssais = parseInt(localStorage.getItem('nbMotsEssais'));
-
+  if(isNaN(nbMotsEssais))     // si c'est la premiere partie sur le navigateur, dans localStorage la varaible sera à NaN, donc on initialise a 1000 pour que lors de la victoire lors de la premiere partie, le nb d'essais qu'a eu le joueur soit enregistré comme le meilleur score .
+  {
+    localStorage.setItem('nbMotsEssais', 1000);
+    nbMotsEssais = parseInt(localStorage.getItem('nbMotsEssais'));
+  }
 
 }
 
@@ -52,7 +61,7 @@ function init() {
   messPerdu = document.getElementById('message_partie_perdue');
   messPerdu.style.visibility='hidden';
 
-  var messGagne = document.getElementById('message_partie_gagnee');
+  messGagne = document.getElementById('message_partie_gagnee');
   messGagne.style.visibility='hidden';
 
 
@@ -128,11 +137,13 @@ function verifieSiLigneComplete(ligne){
  */
 function verifieLesLettresDeLaLigne(ligne, motMystere){
   let ligneActuelle = ligne.querySelectorAll('input');
+  let nbBienPlacees = 0;
 	for (let i = 0; i < ligneActuelle.length; i++) {
 		if (motMystere.indexOf(ligneActuelle[i].value) !== -1){
       if(motMystere[i] === ligneActuelle[i].value)
       {
         ligneActuelle[i].setAttribute('class', 'bien_place');
+        nbBienPlacees++;
       }else{
         ligneActuelle[i].setAttribute('class', 'pas_bien_place');
 		  }
@@ -144,6 +155,7 @@ function verifieLesLettresDeLaLigne(ligne, motMystere){
 
   
   // TODO Faire en sorte que la fonction retourne le nombre de lettres bien placées
+  return nbBienPlacees;
 }
 
 /**
@@ -152,7 +164,7 @@ function verifieLesLettresDeLaLigne(ligne, motMystere){
  * (FONCTION À COMPLÉTER)
  */
  function gerePartiePerdue(){
- 
+  messPerdu.style.visibility='visible';
 }
 
 
@@ -163,14 +175,15 @@ function verifieLesLettresDeLaLigne(ligne, motMystere){
  * (FONCTION À COMPLÉTER)
  */
 function gerePartieGagnee(ligneDernierEssai){
- if(ligneDernierEssai<nbMotsEssais)
+  let essaisActuel = ligneDernierEssai.dataset.numEssai;
+ if(essaisActuel<nbMotsEssais)
  {
-  nbMotsEssais = ligneDernierEssai;
+  nbMotsEssais = essaisActuel;
  }
  nbMotsTrouves++;
  localStorage.setItem('nbMotsEssais', nbMotsEssais);
  localStorage.setItem('nbMotsTrouves', nbMotsTrouves);
-
+ messGagne.style.visibility='visible';
 }
 
 /**
