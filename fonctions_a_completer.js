@@ -40,7 +40,7 @@ function init() {
   nbMotsEssais = parseInt(localStorage.getItem('nbMotsEssais'));
   if(isNaN(nbMotsEssais))     // si c'est la premiere partie sur le navigateur, dans localStorage la varaible sera à NaN, donc on initialise a 1000 pour que lors de la victoire lors de la premiere partie, le nb d'essais qu'a eu le joueur soit enregistré comme le meilleur score .
   {
-    localStorage.setItem('nbMotsEssais', 1000);
+    localStorage.setItem('nbMotsEssais', 6);
     nbMotsEssais = parseInt(localStorage.getItem('nbMotsEssais'));
   }
 
