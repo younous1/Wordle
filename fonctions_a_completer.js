@@ -10,7 +10,7 @@ let motMystere;
  */
 function init() {
   // Initialisation du mot mystère à retrouver
-  motMystere = "CRANE";
+  motMystere = "ISHAK";
   cacheTousLesMessages();
 
   let btnsSupp = document.getElementById('bouton_effacer');
@@ -40,6 +40,13 @@ function init() {
     localStorage.setItem('nbMotsEssais', 1000);
     nbMotsEssais = parseInt(localStorage.getItem('nbMotsEssais'));
   }
+
+  let spanMotsTrouves = document.getElementById('nb_mots_trouves');
+  let spanMeilleurNbEssais = document.getElementById('meilleur_nb_essais');
+
+  // Mise à jour du contenu des spans avec les valeurs du localStorage
+  spanMotsTrouves.textContent = localStorage.getItem('nbMotsTrouves');
+  spanMeilleurNbEssais.textContent = localStorage.getItem('nbMotsEssais');
 
 }
 
@@ -176,6 +183,8 @@ function verifieLesLettresDeLaLigne(ligne, motMystere){
  */
 function gerePartieGagnee(ligneDernierEssai){
   let essaisActuel = ligneDernierEssai.dataset.numEssai;
+  let spanNbEssais = document.getElementById('nb_essais');
+ spanNbEssais.textContent = essaisActuel;
  if(essaisActuel<nbMotsEssais)
  {
   nbMotsEssais = essaisActuel;
@@ -183,6 +192,7 @@ function gerePartieGagnee(ligneDernierEssai){
  nbMotsTrouves++;
  localStorage.setItem('nbMotsEssais', nbMotsEssais);
  localStorage.setItem('nbMotsTrouves', nbMotsTrouves);
+ 
  messGagne.style.visibility='visible';
 }
 
