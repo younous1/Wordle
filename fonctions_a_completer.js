@@ -220,8 +220,9 @@ function gerePartieGagnee(ligneDernierEssai){
  */
 function lanceNouvellePartie() {
  let conf = confirm("voulez vous rejouer?");
- if(confirm==true)
+ if(conf==true)
  {
+  console.log("new game");
   location.reload();
  }else{
 
