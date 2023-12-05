@@ -10,7 +10,23 @@ let motMystere;
  */
 function init() {
   // Initialisation du mot mystère à retrouver
-  motMystere = "ISHAK";
+  //motMystere = "ISHAK";
+  fetch('mots.json')
+        .then(response => response.json())
+        .then(motsJSON => {
+            // Générer un indice aléatoire
+            const indiceAleatoire = Math.floor(Math.random() * motsJSON.length);
+
+            // Récupérer le mot mystère et la définition correspondante
+            const motMystere = motsJSON[indiceAleatoire].mot;
+            const definitionMot = motsJSON[indiceAleatoire].definition;
+
+            // Utiliser le motMystere comme vous le souhaitez dans le reste de votre jeu
+            console.log("Mot mystère :", motMystere);
+            console.log("Définition :", definitionMot);
+
+            // ... Autres actions d'initialisation du jeu
+        })
   cacheTousLesMessages();
 
   let btnsSupp = document.getElementById('bouton_effacer');
