@@ -18,8 +18,8 @@ function init() {
             const indiceAleatoire = Math.floor(Math.random() * motsJSON.length);
 
             // Récupérer le mot mystère et la définition correspondante
-            const motMystere = motsJSON[indiceAleatoire].mot;
-            const definitionMot = motsJSON[indiceAleatoire].definition;
+            motMystere = motsJSON[indiceAleatoire].mot;
+            definitionMot = motsJSON[indiceAleatoire].definition;
 
             // Utiliser le motMystere comme vous le souhaitez dans le reste de votre jeu
             console.log("Mot mystère :", motMystere);
