@@ -11,22 +11,7 @@ let motMystere;
 function init() {
   // Initialisation du mot mystère à retrouver
   //motMystere = "ISHAK";
-  fetch('mots.json')
-        .then(response => response.json())
-        .then(motsJSON => {
-            // Générer un indice aléatoire
-            const indiceAleatoire = Math.floor(Math.random() * motsJSON.length);
-
-            // Récupérer le mot mystère et la définition correspondante
-            motMystere = motsJSON[indiceAleatoire].mot;
-            definitionMot = motsJSON[indiceAleatoire].definition;
-
-            // Utiliser le motMystere comme vous le souhaitez dans le reste de votre jeu
-            console.log("Mot mystère :", motMystere);
-            console.log("Définition :", definitionMot);
-
-            // ... Autres actions d'initialisation du jeu
-        })
+  majMotMystere();
   cacheTousLesMessages();
 
   let btnsSupp = document.getElementById('bouton_effacer');
@@ -237,8 +222,7 @@ function lanceNouvellePartie() {
  let conf = confirm("voulez vous rejouer?");
  if(confirm==true)
  {
-  reinitialiseLeJeu();
-  ajax_get_request(majMotMystere,"generation.php",true)
+  location.reload();
  }else{
 
  }
@@ -251,8 +235,21 @@ function lanceNouvellePartie() {
  * renvoie l'appel AJAX
  * (FONCTION À COMPLÉTER)
  */
-function majMotMystere(res) {
-  let parsedRes = JSON.parse(res);
+function majMotMystere() {
+  fetch('mots.json')
+        .then(response => response.json())
+        .then(motsJSON => {
+            // Générer un indice aléatoire
+            const indiceAleatoire = Math.floor(Math.random() * motsJSON.length);
 
-	mot_a_deviner = parsedRes.mots_possibles;
+            // Récupérer le mot mystère et la définition correspondante
+            motMystere = motsJSON[indiceAleatoire].mot;
+            definitionMot = motsJSON[indiceAleatoire].definition;
+
+            // Utiliser le motMystere comme vous le souhaitez dans le reste de votre jeu
+            console.log("Mot mystère :", motMystere);
+            console.log("Définition :", definitionMot);
+
+            // ... Autres actions d'initialisation du jeu
+        })
 }
