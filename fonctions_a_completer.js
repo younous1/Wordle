@@ -12,7 +12,6 @@ function init() {
   // Initialisation du mot mystère à retrouver
   //motMystere = "ISHAKS";
   majMotMystere();
-  genererInputs();
   cacheTousLesMessages();
 
   let btnsSupp = document.getElementById('bouton_effacer');
@@ -252,7 +251,8 @@ function majMotMystere() {
             console.log("Mot mystère :", motMystere);
             console.log("Définition :", definitionMot);
 
-            // ... Autres actions d'initialisation du jeu
+            // ... On genere les cases en fonction du motMystere
+            genererInputs();
         })
 }
 
