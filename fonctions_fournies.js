@@ -130,7 +130,7 @@ function decaleCaseActiveADroite() {
   }
 
   // Vérifie dans quel cas on est
-  if (nbLettresBienPlacees === NB_LETTRES_MOT) {
+  if (nbLettresBienPlacees === motMystere.length) {
     // Toutes les lettres sont bien placées => C'est gagné !
     gerePartieGagnee(ligneActive);
 

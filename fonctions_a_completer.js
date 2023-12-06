@@ -10,8 +10,9 @@ let motMystere;
  */
 function init() {
   // Initialisation du mot mystère à retrouver
-  //motMystere = "ISHAK";
+  //motMystere = "ISHAKS";
   majMotMystere();
+  genererInputs();
   cacheTousLesMessages();
 
   let btnsSupp = document.getElementById('bouton_effacer');
@@ -253,4 +254,33 @@ function majMotMystere() {
 
             // ... Autres actions d'initialisation du jeu
         })
+}
+
+function genererInputs() {
+  var grilleJeu = document.getElementById("grille_jeu");
+
+  // Boucle pour chaque ligne
+  for (var i = 1; i <= 6; i++) {
+      var ligne2 = document.createElement("div");
+      ligne2.id = "ligne_" + i;
+      ligne2.classList.add("essai");
+      ligne2.setAttribute("data-num-essai", i);
+
+      // Boucle pour chaque lettre dans le motMystere
+      for (var j = 0; j < motMystere.length; j++) {
+          var input = document.createElement("input");
+          input.type = "text";
+          input.disabled = true;
+          input.autocomplete = "off";
+
+          // Ajouter la classe "case_active" au premier input de la première ligne
+          if (i === 1 && j === 0) {
+              input.classList.add("case_active");
+          }
+
+          ligne2.appendChild(input);
+      }
+
+      grilleJeu.appendChild(ligne2);
+  }
 }
