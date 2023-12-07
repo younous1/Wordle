@@ -1,0 +1,13 @@
+- rajouter le symbole [ ' ] et les espaces (pour les mots composer/avec espace)
+
+- Si à la fin du jeu l'utilisateur n'a pas trouvé, on lui propose de recommencer ou de voir la solution.
+
+- Creer plusieurs niveaux de difficultées
+
+- Completer les definitions et y ajouter des reference (ex: verset, hadith...)
+
+- faire l'application sur mobile (permetrais d'apprendre de nouveau mot)
+
+- tourner l'application de maniere accesible aux débutants (avec des niveaux notaments), surtout dans les definitions, le but est de faire decouvrir pleins de mots à ceux qui ne les connaissent pas.
+
+- mettre la premiere lettre du mot (au moins en niveaux facile ou normal)
