@@ -1,4 +1,4 @@
-- rajouter le symbole [ ' ] et les espaces (pour les mots composer/avec espace)
+- rajouter le symbole [ ' ] , [-] et les espaces (pour les mots composer/avec espace), il faudra indiquer à l'utilisateur que certains mots contienent ces caractere
 
 - Si à la fin du jeu l'utilisateur n'a pas trouvé, on lui propose de recommencer ou de voir la solution.
 
@@ -11,3 +11,6 @@
 - tourner l'application de maniere accesible aux débutants (avec des niveaux notaments), surtout dans les definitions, le but est de faire decouvrir pleins de mots à ceux qui ne les connaissent pas.
 
 - mettre la premiere lettre du mot (au moins en niveaux facile ou normal)
+
+- a la place du texte "X mots trouvé", mettre "X/nbMotDuMode mots trouvé", l'utilisateur pourra connaitre le nombre de mots qu'il a trouvé parmis tout les mots du mode de diffuctlé (ex: il a trouvé 6 mot parmis les 70 du mode facile)
+
