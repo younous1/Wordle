@@ -2,12 +2,12 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Une variante du Wordle en Français</title>
+    <title>Kalimatly</title>
     <link rel="shortcut icon" type="image/x-icon" href="icons/favicon-W.ico" />
     <link rel="stylesheet" href="wordle.css" />
   </head>
   <body onload="init()">
-    <h1>Une variante du <span class="wordle">Wordle</span> en Français</h1>
+    <h1> Apprenez sur l'<span class="wordle">Islam</span> en vous amusant!</h1>
 
     <section id="section_du_haut">
       <p class="info">
@@ -25,15 +25,18 @@
       <section>
         <section id="zone_messages">
           <p id="message_mot_incomplet" class="message avertissement">
-            Il faut saisir un mot de 5 lettres pour pouvoir valider !
+            Veuillez remplir toutes les cases avant de valider !
           </p>
 
           <p id="message_partie_perdue" class="message perdu">
-            Dommage, c'est perdu...
+            Perdu, vous n'avez pas deviné le mot...
           </p>
 
           <p id="message_partie_gagnee" class="message gagne">
-            Bravo ! Vous avez trouvé en <span id="nb_essais">X</span> essai(s) !
+            MashaAllah ! Vous avez trouvé en <span id="nb_essais">X</span> essai(s) !
+          </p>
+          <p id="message_definition" class="message gagne">
+            <span id="motMystere">X</span> : <span id="definition">X</span>
           </p>
         </section>
 
@@ -71,6 +74,8 @@
           </div>
 
           <div>
+            <button class="bouton_simple">'</button>
+            <button class="bouton_simple">-</button>
             <button class="bouton_simple">W</button>
             <button class="bouton_simple">X</button>
             <button class="bouton_simple">C</button>
