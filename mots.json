@@ -97,5 +97,9 @@
   {"mot": "ISTINJA", "definition": "La purification après les besoins naturels"},
   {"mot": "TAWHID", "definition": "L'unicité de Dieu"},
   {"mot": "MASIH", "definition": "Le Messie, Jésus (Isa) dans l'islam"},
+  {"mot": "KITAB", "definition": "Livre"},
+  {"mot": "MUSHAF", "definition": "[completer]"},
+  {"mot": "QARI", "definition": "[completer]"},
+  {"mot": "RAWI", "definition": "[completer]"},
   {"mot": "MU'MIN", "definition": "Le croyant"}
 ]
