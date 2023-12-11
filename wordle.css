@@ -38,6 +38,10 @@ p.info {
 }
 
 /* ### Section des messages du Jeu ### */
+#zone_messages{
+  width: 550px;
+}
+
 p.message {
   max-width: 90%;
   margin: 10px auto;
