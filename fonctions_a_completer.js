@@ -27,6 +27,9 @@ function init() {
 		button.addEventListener('click', () => actionne(d));
 	}
 
+  let btnsSpace = document.getElementById('space_button');
+	btnsSpace.addEventListener('click', () => actionne(' '));
+
   let btnsValider = document.getElementById('bouton_valider');
 	btnsValider.addEventListener('click', () => valideLeMot());
 
@@ -267,6 +270,7 @@ function majMotMystere() {
 
 function genererInputs() {
   var grilleJeu = document.getElementById("grille_jeu");
+  grilleJeu.innerHTML = '';
 
   // Boucle pour chaque ligne
   for (var i = 1; i <= 6; i++) {
