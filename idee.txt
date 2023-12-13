@@ -19,3 +19,5 @@
 [ ] transformer les message on pop up (apparaissent sur le jeu et pas dans une div spéciale), zone de case plus grande, au dessus, clavier en dessous
 
 [ ] faire un header avec des icons (help, stats, indice...), titre "Kalimatly" au milieu du header
+
+[ ] faire plusieurs mots.json : 3 francais (mots en francais avec l'equivalent en arabe lors de la definition, ex: coran -> quran, paix, paradis -> janna, detestable -> markruh) (avec les 3 difficultées), 3 anglais...
