@@ -1,16 +1,21 @@
-- rajouter le symbole [ ' ] , [-] et les espaces (pour les mots composer/avec espace), il faudra indiquer à l'utilisateur que certains mots contienent ces caractere
+[X] rajouter le symbole [ ' ] , [-] et les espaces (pour les mots composer/avec espace), il faudra indiquer à l'utilisateur que certains mots contienent ces caractere
 
-- Si à la fin du jeu l'utilisateur n'a pas trouvé, on lui propose de recommencer ou de voir la solution.
+[ ] Si à la fin du jeu l'utilisateur n'a pas trouvé, on lui propose de recommencer ou de voir la solution.
 
-- Creer plusieurs niveaux de difficultées
+[ ] Creer plusieurs niveaux de difficultées
 
-- Completer les definitions et y ajouter des reference (ex: verset, hadith...)
+[ ] Completer les definitions et y ajouter des reference (ex: verset, hadith...)
 
-- faire l'application sur mobile (permetrais d'apprendre de nouveau mot)
+[ ] faire l'application sur mobile (permetrais d'apprendre de nouveau mot)
 
-- tourner l'application de maniere accesible aux débutants (avec des niveaux notaments), surtout dans les definitions, le but est de faire decouvrir pleins de mots à ceux qui ne les connaissent pas.
+[ ] tourner l'application de maniere accesible aux débutants (avec des niveaux notaments), surtout dans les definitions (simple à comprendre, pas technique), le but est de faire decouvrir pleins de mots à ceux qui ne les connaissent pas.
 
-- mettre la premiere lettre du mot (au moins en niveaux facile ou normal)
+[ ] mettre la premiere lettre du mot (au moins en niveaux facile ou normal)
 
-- a la place du texte "X mots trouvé", mettre "X/nbMotDuMode mots trouvé", l'utilisateur pourra connaitre le nombre de mots qu'il a trouvé parmis tout les mots du mode de diffuctlé (ex: il a trouvé 6 mot parmis les 70 du mode facile)
+[ ] a la place du texte "X mots trouvé", mettre "X/nbMotDuMode mots trouvé", l'utilisateur pourra connaitre le nombre de mots qu'il a trouvé parmis tout les mots du mode de diffuctlé (ex: il a trouvé 6 mot parmis les 70 du mode facile)
 
+[ ] bouton pour donner un indice, le jeu va choisir une case aléatoire, et va reveler la lettre à cet emplacement
+
+[ ] transformer les message on pop up (apparaissent sur le jeu et pas dans une div spéciale), zone de case plus grande, au dessus, clavier en dessous
+
+[ ] faire un header avec des icons (help, stats, indice...), titre "Kalimatly" au milieu du header

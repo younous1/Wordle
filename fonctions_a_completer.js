@@ -18,6 +18,7 @@ function init() {
   let btnsSupp = document.getElementById('bouton_effacer');
 	btnsSupp.addEventListener('click', () => effaceCaseActive());
 
+  window.addEventListener('keydown', (event) => handleKeyPress(event.key));
 
   // Association de clic sur les lettres
 	let btnsLettres = document.querySelectorAll('.bouton_simple');
@@ -295,5 +296,28 @@ function genererInputs() {
       }
 
       grilleJeu.appendChild(ligne2);
+  }
+}
+
+function handleKeyPress(key) {
+  // Récupérer la case active
+  let caseActive = retourneCaseActive();
+
+  // Vérifier si la touche est une lettre et si une case est active
+  if (/^[a-zA-Z]$/.test(key) && caseActive) {
+    // Saisir la lettre dans la case active
+    keyLetter = key.toUpperCase();
+
+    // Décaler la case active à droite si possible
+    actionne(keyLetter);
+  } else if (key === 'Enter') {
+    // Si la touche est "Entrée", valider le mot
+    valideLeMot();
+  } else if (key === 'Backspace') {
+    // Si la touche est "Arrière" (ou "Supprimer"), effacer la case active
+    effaceCaseActive();
+  }
+  else if (key === ' ') {
+    actionne(' ');
   }
 }
