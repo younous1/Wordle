@@ -321,3 +321,15 @@ function handleKeyPress(key) {
     actionne(' ');
   }
 }
+
+function showPopup(popupName) {
+  console.log(popupName);
+  var popup = document.getElementById(popupName);
+  popup.style.display = 'block';
+}
+
+function closePopup(popupName) {
+  console.log(popupName);
+  var popup = document.getElementById(popupName);
+  popup.style.display = 'none';
+}

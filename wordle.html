@@ -7,15 +7,42 @@
     <link rel="stylesheet" href="wordle.css" />
   </head>
   <body onload="init()">
-    <h1> Apprenez sur l'<span class="wordle">Islam</span> en vous amusant!</h1>
+    <header>
+      <div id="header">
+        <button id="stats_button" onclick="showPopup('stats_popup')">
+          <ion-icon name="stats-chart"></ion-icon>
+        </button>
+        <h1><span style="color: var(--green);">K</span>alimat<span style="color: var(--white);">ly</span></h1>
+        <button id="help_button" onclick="showPopup('help_popup')">
+          <ion-icon name="help"></ion-icon>
+        </button>
+      </div>
+    </header>
 
-    <section id="section_du_haut">
-      <p class="info">
-        But du jeu : Trouvez le mot de 5 lettres avec le minimum d'essais
-        possibles.<br>
-        Vous pouvez lancer une nouvelle partie pour avoir un nouveau mot.<br>
-      </p>
-    </section>
+    <div id="stats_popup" class="stats_popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('stats_popup')">&times;</span>
+        <p class="info">
+          <b>Nombre de parties gagnées</b> : <span id="nb_mots_trouves">0</span> mot(s) trouvé(s)<br>
+          <b>Meilleur score</b> : Un mot trouvé en  <span id="meilleur_nb_essais">0</span> essai(s)</p>
+        </p>
+      </div>
+    </div>
+
+    <div id="help_popup" class="help_popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('help_popup')">&times;</span>
+        <p class="info">
+          <b style="color: var(--orange); font-size: 1.2em;">But du jeu :</b><br><br> Trouvez le mot de 5 lettres avec le minimum d'essais
+          possibles.<br><br>
+          Vous pouvez lancer une nouvelle partie pour avoir un nouveau mot.<br>
+        </p>
+      </div>
+    </div>
+
+    
+
+    <h1> Apprenez sur l'<span class="wordle"></span> en vous amusant!</h1>
 
     <section id="section_du_milieu">
       <section id="grille_jeu">
@@ -137,14 +164,11 @@
       </section>
     </section>
 
-    <section id="section_du_bas">
-      <p class="info">
-        <b>Nombre de parties gagnées</b> : <span id="nb_mots_trouves">0</span> mot(s) trouvé(s)<br>
-        <b>Meilleur score</b> : Un mot trouvé en  <span id="meilleur_nb_essais">0</span> essai(s)</p>
-    </section>
 
     <!-- Intégration des scripts JS -->
     <script src="fonctions_fournies.js"></script>
     <script src="fonctions_a_completer.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
