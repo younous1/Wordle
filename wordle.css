@@ -36,14 +36,26 @@ header {
 }
 
 #header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--grey);
   border-color: var(--grey);
   color: white;
   font-size: 1.1em;
   height: 35px;
   width: 35px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
+  border: none;
+}
+#header button:hover {
+  background-color: #363636;
+}
+
+#right_buttons, #left_buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .help_popup, .stats_popup {
@@ -78,14 +90,11 @@ header {
 
 .close:hover,
 .close:focus {
-  color: white;
+  color: rgb(164, 164, 164);
   text-decoration: none;
   cursor: pointer;
 }
 
-.ion-icon {
-  font-weight: bold;
-}
 
 h1 {
   font-size: 2em;

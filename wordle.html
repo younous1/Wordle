@@ -3,19 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <title>Kalimatly</title>
-    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon-W.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="icons/logo.png" />
     <link rel="stylesheet" href="wordle.css" />
   </head>
   <body onload="init()">
     <header>
       <div id="header">
-        <button id="stats_button" onclick="showPopup('stats_popup')">
-          <ion-icon name="stats-chart"></ion-icon>
-        </button>
-        <h1><span style="color: var(--green);">K</span>alimat<span style="color: var(--white);">ly</span></h1>
-        <button id="help_button" onclick="showPopup('help_popup')">
-          <ion-icon name="help"></ion-icon>
-        </button>
+        <div id="left_buttons">
+          <button id="stats_button" class="header_button" onclick="showPopup('stats_popup')">
+            <ion-icon name="stats-chart"></ion-icon>
+          </button>
+          <button id="help_button" class="header_button" onclick="showPopup('help_popup')">
+            <ion-icon name="help"></ion-icon>
+          </button>
+        </div>
+        <div>
+          <h1><span style="color: var(--green);">K</span>alimat<span style="color: var(--white);">ly</span></h1>
+        </div>
+        <div id="right_buttons">
+          <button id="bouton_nouvelle_partie" class="header_button">
+            <ion-icon name="reload"></ion-icon>
+          </button>
+          <button id="hint_button" class="header_button">
+            <ion-icon name="eye"></ion-icon>
+          </button>
+        </div>
+        
+        
       </div>
     </header>
 
@@ -23,8 +37,9 @@
       <div class="popup-content">
         <span class="close" onclick="closePopup('stats_popup')">&times;</span>
         <p class="info">
-          <b>Nombre de parties gagnées</b> : <span id="nb_mots_trouves">0</span> mot(s) trouvé(s)<br>
-          <b>Meilleur score</b> : Un mot trouvé en  <span id="meilleur_nb_essais">0</span> essai(s)</p>
+          <b style="color: #49c44d; font-size: 1.2em;">Statistiques :</b><br><br> 
+          Nombre de mots trouvés : <b style="color: #49c44d"><span id="nb_mots_trouves" >0</span></b><br>
+          Meilleur score : <b style="color: #49c44d"><span id="meilleur_nb_essais" >0</span>/6 essais</b>
         </p>
       </div>
     </div>
@@ -33,7 +48,7 @@
       <div class="popup-content">
         <span class="close" onclick="closePopup('help_popup')">&times;</span>
         <p class="info">
-          <b style="color: var(--orange); font-size: 1.2em;">But du jeu :</b><br><br> Trouvez le mot de 5 lettres avec le minimum d'essais
+          <b style="color: #ffb92d; font-size: 1.2em;">But du jeu :</b><br><br> Trouvez le mot de 5 lettres avec le minimum d'essais
           possibles.<br><br>
           Vous pouvez lancer une nouvelle partie pour avoir un nouveau mot.<br>
         </p>
@@ -42,7 +57,7 @@
 
     
 
-    <h1> Apprenez sur l'<span class="wordle"></span> en vous amusant!</h1>
+    <h2> Apprenez sur l'<span class="wordle"></span> en vous amusant!</h2>
 
     <section id="section_du_milieu">
       <section id="grille_jeu">
@@ -155,11 +170,6 @@
             </button>
           </div>
 
-          <div>
-            <button id="bouton_nouvelle_partie" class="tres_gros_bouton">
-              Lancer une nouvelle partie
-            </button>
-          </div>
         </section>
       </section>
     </section>
