@@ -21,3 +21,10 @@
 [ ] faire un header avec des icons (help, stats, indice...), titre "Kalimatly" au milieu du header
 
 [ ] faire plusieurs mots.json : 3 francais (mots en francais avec l'equivalent en arabe lors de la definition, ex: coran -> quran, paix, paradis -> janna, detestable -> markruh) (avec les 3 difficultées), 3 anglais...
+
+[ ] faire en sorte que l'utilisateur ne puisse pas entreer un mot qui n'existe pas (system qui regarde si le mot est présent dans le JSON)
+
+[ ] (idée) suite logique dans les mots, toujours la même suite l'utilisateur doit trouver le mot pour passer au prochain, quand il a fini le mode facile, il passe au mode suivant (ex: difficile), (on stock l'index du JSON dans lequel l'utilisateur était dernierement et on lui propose le mot à cet index quand il se connect, on stock aussi le niveau auquelle il était), donc il faudra prevoir la popup oeil (les categories seront en haut de la popup (horizontalement en mode categorie) et sur chacque categorie, la liste des mot est affiché, l'utilisateur aura les mots qu'il a trouvé qui sont afffiché avec la posibilité de voir la definition, ou d'avoir les prochains mots caché mais il pourra voir les solutions)
+
+[ ] 
+
