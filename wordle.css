@@ -20,7 +20,7 @@ body {
 
 header {
   width: 100%;
-  height: 60px;
+  height: 45px;
   display: flex;
   justify-content: center;
   background: #1d1d20;
@@ -43,8 +43,8 @@ header {
   border-color: var(--grey);
   color: white;
   font-size: 1.1em;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   border-radius: 20px;
   cursor: pointer;
   border: none;
@@ -70,9 +70,17 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+#help_list{
+  gap:3px;
+}
+
+#help_list li{
+  display: flex;
+}
+
 .popup-content {
   background-color: var(--grey); /* Couleur de fond similaire à la section_du_haut */
-  margin: 10% auto;
+  margin: 3% auto;
   max-width: 30%;
   padding: 10px;
   border-radius: 5px;
@@ -95,9 +103,22 @@ header {
   cursor: pointer;
 }
 
+#informations_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-h1 {
-  font-size: 2em;
+#informations_section {
+  position: relative; /* Ajouter une position relative pour que les éléments absolus soient positionnés par rapport à ce contenant */
+}
+
+#informations_section section p {
+  position: absolute;
+}
+
+h2 {
+  font-size: 1.2em;
 }
 
 .wordle {
@@ -118,6 +139,7 @@ p.info {
 /* ### Section des messages du Jeu ### */
 #zone_messages{
   width: 550px;
+  display: contents;
 }
 
 p.message {
@@ -147,17 +169,19 @@ p.cache {
 #section_du_milieu {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
 /* ### Section Grille de Jeu ### */
 #grille_jeu {
-  margin: 10px 20px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .essai {
-  margin: 2px auto;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
@@ -194,14 +218,14 @@ p.cache {
 /* ### Section Clavier (et boutons) du Jeu ### */
 #clavier_jeu {
   width: 550px;
-  margin: 20px 2px;
+  margin: 5px 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #clavier_jeu div {
-  margin: 5px auto;
+  margin: 2px auto;
 }
 
 #clavier_jeu button {

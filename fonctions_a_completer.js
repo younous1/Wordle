@@ -10,9 +10,9 @@ let motMystere;
  */
 function init() {
   // Initialisation du mot mystère à retrouver
-  //motMystere = "ISHAK";
-  //definitionMot = "C'est une des personne les plus influentes et importante de Chambéry. Il se situe principalement sur Chambéry le Haut (ZUP)";
-  majMotMystere();
+  motMystere = "ISHAK";
+  definitionMot = "C'est une des personne les plus influentes et importante de Chambéry. Il se situe principalement sur Chambéry le Haut (ZUP)";
+  //majMotMystere();
   cacheTousLesMessages();
 
   let btnsSupp = document.getElementById('bouton_effacer');
@@ -80,8 +80,6 @@ function init() {
   messGagne = document.getElementById('message_partie_gagnee');
   messGagne.style.visibility='hidden';
 
-  messDefinition = document.getElementById('message_definition');
-  messDefinition.style.visibility='hidden';
 
 
 }
@@ -135,6 +133,9 @@ function verifieSiLigneComplete(ligne){
 
   if (nbVide > 0) {
     messAvert.style.visibility = 'visible';
+    setTimeout(function () {
+      messAvert.style.visibility = 'hidden';
+    }, 3000);
     return false;
   } else {
     return true;
